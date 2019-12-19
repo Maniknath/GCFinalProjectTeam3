@@ -32,27 +32,27 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Level)
-            </td>
-            <td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
 
-                <button class="btn btn-warning"> <a asp-controller="Home" asp-action="TrailsDetail" asp-route-id="@item.Id">Details</a> </button>
+                    <button class="btn btn-warning"> <a asp-controller="Home" asp-action="TrailsDetail" asp-route-id="@item.Id">Details</a> </button>
 
 
-            </td>
-        </tr>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
