@@ -15,11 +15,18 @@ namespace FinalProject.Controllers
 {
     public class HomeController : Controller
     {
+     
         private readonly ApplicationDbContext _db;
         public HomeController(ApplicationDbContext db)
         {
             _db = db;
         }
+<<<<<<< HEAD
+       // BucketListController bucketListController = new BucketListController();
+
+     
+        public IActionResult Index()
+=======
         public IActionResult Index()
         {
             return View();
@@ -162,10 +169,14 @@ namespace FinalProject.Controllers
         }
 
         public IActionResult Confirm()
+>>>>>>> 755846fe4f7549e3de8de5228d4fe2e5a13e00d2
         {
             return View();
         }
 
+<<<<<<< HEAD
+        public IActionResult GeneralSearch(string state)
+=======
         public IActionResult BucketList()
         {
             string id = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
@@ -227,6 +238,7 @@ namespace FinalProject.Controllers
             return View();
         }
         public IActionResult Privacy()
+>>>>>>> 755846fe4f7549e3de8de5228d4fe2e5a13e00d2
         {
             return View();
         }
@@ -240,6 +252,46 @@ namespace FinalProject.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+<<<<<<< HEAD
+        
+        public IActionResult TrailsDetail(int Id)
+        {
+            Trails x = TrailDAL.GetTrailById(Id);
+            List<Forcast> f = TrailDAL.OpenWeatherGetForcast(x.Location);
+            ViewBag.Forcast = f;
+            ViewBag.Water = x.Length % 6;
+            return View(x);
+        }
+
+        
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult Essentials()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+
+
+
+        private bool TrailsExists(int id)
+        {
+            return _db.Trails.Any(e => e.Id == id);
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+=======
         public string GetBuild()
         {
 
@@ -465,5 +517,6 @@ namespace FinalProject.Controllers
         {
             return View();
         }
+>>>>>>> 755846fe4f7549e3de8de5228d4fe2e5a13e00d2
     }
 }

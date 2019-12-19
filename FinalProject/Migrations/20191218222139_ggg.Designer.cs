@@ -4,14 +4,16 @@ using FinalProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FinalProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191218222139_ggg")]
+    partial class ggg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,7 +28,6 @@ namespace FinalProject.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-<<<<<<< HEAD
                     b.Property<int>("Ascent")
                         .HasColumnType("int");
 
@@ -39,8 +40,6 @@ namespace FinalProject.Migrations
                     b.Property<string>("ConditionStatus")
                         .HasColumnType("nvarchar(max)");
 
-=======
->>>>>>> 755846fe4f7549e3de8de5228d4fe2e5a13e00d2
                     b.Property<string>("Date")
                         .HasColumnType("nvarchar(max)");
 
