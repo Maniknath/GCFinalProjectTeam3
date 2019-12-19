@@ -5,13 +5,6 @@
     <UserSecretsId>aspnet-FinalProject-48EBCA49-0A7A-4503-967D-42A0DA7D99CD</UserSecretsId>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Views\BucketList\**" />
-    <Content Remove="Views\BucketList\**" />
-    <EmbeddedResource Remove="Views\BucketList\**" />
-    <None Remove="Views\BucketList\**" />
-  </ItemGroup>
-
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0" />
